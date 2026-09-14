@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Gaming PC for Mallorca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root {
+    --ground: #F2F5F7;
+    --surface: #FFFFFF;
+    --ink: #15202A;
+    --muted: #586674;
+    --line: #D6DEE4;
+    --accent: #0B5E8A;
+    --accent-ink: #FFFFFF;
+    --accent-soft: #E0EDF4;
+    --good: #1E7A4C;
+    --good-soft: #E1F2E8;
+    --warn: #9A5E0A;
+    --warn-soft: #F6ECDA;
+    --bad: #AF3838;
+    --bad-soft: #F7E3E3;
+
+    --f-display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+    --f-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+    --s-1: 0.25rem; --s-2: 0.5rem; --s-3: 0.75rem; --s-4: 1rem; --s-5: 1.5rem; --s-6: 2rem; --s-7: 3rem;
+    --r: 10px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0D141A;
+      --surface: #141E26;
+      --ink: #E5ECF1;
+      --muted: #93A2AE;
+      --line: #25333E;
+      --accent: #5FB2DE;
+      --accent-ink: #06222F;
+      --accent-soft: #15303E;
+      --good: #5DC28D;
+      --good-soft: #143325;
+      --warn: #E2A94F;
+      --warn-soft: #36291A;
+      --bad: #E77C7C;
+      --bad-soft: #3A1E20;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0D141A;
+    --surface: #141E26;
+    --ink: #E5ECF1;
+    --muted: #93A2AE;
+    --line: #25333E;
+    --accent: #5FB2DE;
+    --accent-ink: #06222F;
+    --accent-soft: #15303E;
+    --good: #5DC28D;
+    --good-soft: #143325;
+    --warn: #E2A94F;
+    --warn-soft: #36291A;
+    --bad: #E77C7C;
+    --bad-soft: #3A1E20;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 15px;
+    line-height: 1.55;
+    padding-inline: 20px;
+    padding-block: 0;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding-block: var(--s-7); display: grid; gap: var(--s-7); }
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+  h1, h2, h3, h4 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-height: 1.15; }
+  h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 700; letter-spacing: -0.01em; }
+  h2 { font-size: 1.6rem; font-weight: 600; }
+  h3 { font-size: 1.4rem; font-weight: 600; }
+  h4 { font-size: 1.05rem; font-weight: 600; }
+  p { margin: 0; }
+  .eyebrow, .label {
+    font-family: var(--f-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+  }
+  section { display: grid; gap: var(--s-4); }
+  .note { color: var(--muted); font-size: 0.9rem; max-width: 70ch; }
+  .sub { display: block; color: var(--muted); font-size: 0.8rem; font-weight: 400; }
+  .num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  /* Header */
+  header { display: grid; gap: var(--s-4); }
+  .lede { max-width: 66ch; color: var(--muted); font-size: 1.05rem; }
+  .picks { display: grid; gap: var(--s-4); }
+  .picks-head { display: grid; gap: var(--s-2); }
+  .pick-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr)); gap: var(--s-5); }
+  .pick-card { background: var(--surface); border: 1px solid var(--accent); box-shadow: 0 0 0 1px var(--accent); border-radius: var(--r); padding: var(--s-5); display: flex; flex-direction: column; gap: var(--s-3); }
+  .pick-card h3 { font-size: 1.6rem; }
+  .pick-card .why { color: var(--muted); }
+  .pick-card .how, .pick-card .fit { font-size: 0.9rem; }
+  .pick-card .fine { color: var(--muted); font-size: 0.8rem; margin-top: auto; border-top: 1px solid var(--line); padding-top: var(--s-2); }
+  .buy td:nth-child(2) { color: var(--muted); font-size: 0.8rem; white-space: nowrap; }
+  .buy td:first-child { font-weight: 500; }
+  .buy tfoot td { border-top: 2px solid var(--line); border-bottom: 0; background: var(--ground); font-weight: 600; }
+  .buy tfoot td.r { font-size: 1.2rem; }
+  .diff-block { display: grid; gap: var(--s-2); }
+  .diff { min-width: 760px; }
+  .diff td:first-child { font-weight: 600; white-space: nowrap; }
+  .diff td:nth-child(2), .diff td:nth-child(3) { width: 24%; }
+  .diff td:last-child { color: var(--muted); font-size: 0.85rem; }
+  .diff td.win { color: var(--good); font-weight: 600; }
+  .diff td.win::before { content: "✓ "; }
+  .diff thead th.col { color: var(--accent); }
+
+  /* Chips & tags */
+  .chip { font-family: var(--f-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 6px; border-radius: 4px; white-space: nowrap; display: inline-block; }
+  .chip.ok { background: var(--good-soft); color: var(--good); }
+  .chip.buy { background: var(--accent-soft); color: var(--accent); }
+  .chip.check { background: var(--warn-soft); color: var(--warn); }
+  .tag { font-family: var(--f-mono); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 8px; border-radius: 4px; justify-self: start; }
+  .tag.best { background: var(--accent); color: var(--accent-ink); }
+  .tag.alt { background: var(--good-soft); color: var(--good); }
+  .tag.box { background: var(--warn-soft); color: var(--warn); }
+
+  /* Setup cards */
+  .setups { display: grid; gap: var(--s-6); }
+  .setup { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: var(--s-5); display: grid; gap: var(--s-5); }
+  .setup.best { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+  .setup-top { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s-3) var(--s-5); flex-wrap: wrap; }
+  .setup-id { display: grid; gap: var(--s-1); }
+  .setup-id .where { color: var(--muted); font-size: 0.9rem; }
+  .setup-price { text-align: right; display: grid; gap: 2px; }
+  .setup-price .num { font-size: 1.7rem; font-weight: 600; }
+  .setup-price .sub { font-family: var(--f-mono); font-size: 0.72rem; }
+  @media (max-width: 560px) { .setup-price { text-align: left; } }
+  .block { display: grid; gap: var(--s-2); }
+  .block-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--s-3); flex-wrap: wrap; }
+  .block-head .sub { font-size: 0.82rem; }
+
+  .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th { text-align: left; font-family: var(--f-mono); font-size: 0.68rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); padding: var(--s-2) var(--s-3); border-bottom: 1px solid var(--line); white-space: nowrap; }
+  td { padding: var(--s-2) var(--s-3); border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.r, th.r { text-align: right; }
+  td.r { font-family: var(--f-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+  .kit { min-width: 640px; }
+  .kit td:first-child { font-weight: 600; white-space: nowrap; width: 8.5rem; }
+  .kit td:last-child { width: 6.5rem; }
+  .kit tfoot td { border-top: 2px solid var(--line); border-bottom: 0; background: var(--ground); font-weight: 600; }
+
+  .mon { min-width: 680px; }
+  .mon td:first-child { font-weight: 600; white-space: nowrap; }
+  .mon td.tot { font-weight: 600; }
+  .mon tr.rec td { background: var(--accent-soft); }
+
+  .ext { min-width: 620px; }
+  .ext td:first-child { font-weight: 600; white-space: nowrap; width: 9rem; }
+  .ext td:nth-child(2) { width: 7.5rem; }
+
+  .pc { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: var(--s-4); }
+  .pc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 0.9rem; }
+  .pc li { display: grid; grid-template-columns: 1.1rem 1fr; }
+  .pc li::before { font-family: var(--f-mono); font-weight: 600; }
+  .pros li::before { content: "+"; color: var(--good); }
+  .cons li::before { content: "−"; color: var(--bad); }
+  .pc .label { margin-bottom: var(--s-2); }
+
+  /* Summary */
+  .summary { min-width: 760px; }
+  .summary td:first-child { font-weight: 600; white-space: nowrap; }
+  .summary thead th.best { color: var(--accent); }
+
+  /* Checklist */
+  .checklist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: var(--s-3); }
+  .checklist li { display: grid; grid-template-columns: 1.2rem 1fr; gap: var(--s-3); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: var(--s-3) var(--s-4); font-size: 0.9rem; }
+  .checklist li::before { content: ""; width: 1rem; height: 1rem; margin-top: 3px; border: 2px solid var(--accent); border-radius: 3px; }
+
+  /* Route */
+  .route-steps { list-style: none; counter-reset: step; margin: 0; padding: 0; display: grid; gap: var(--s-3); }
+  .route-steps li { counter-increment: step; display: grid; grid-template-columns: 1.8rem 1fr; gap: var(--s-3); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: var(--s-3) var(--s-4); font-size: 0.9rem; }
+  .route-steps li::before { content: counter(step); font-family: var(--f-mono); font-weight: 600; font-size: 0.8rem; color: var(--accent-ink); background: var(--accent); width: 1.6rem; height: 1.6rem; border-radius: 50%; display: grid; place-items: center; }
+
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: var(--s-6); align-items: start; }
+  .plain ul { margin: 0; padding-left: 1.1rem; display: grid; gap: var(--s-2); }
+  .plain li::marker { color: var(--muted); }
+
+  footer { color: var(--muted); font-size: 0.82rem; border-top: 1px solid var(--line); padding-top: var(--s-4); display: grid; gap: var(--s-2); }
+  footer ul { margin: 0; padding-left: 1.1rem; columns: 2 280px; }
+  footer li { margin-bottom: 2px; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header>
+    <p class="eyebrow"><a href="index.html">Deutsche Fassung</a> · For Tobi's son · Badia Gran, Mallorca · checked 14 Sep 2026</p>
+    <h1>Gaming PC for Mallorca</h1>
+    <p class="lede">I compared shops on Mallorca and online and found two good ways to do it. Pick one of the two packages below and buy it exactly as listed — each is complete, with Windows, so nothing else is needed. The full comparison, other monitors, upgrade options, a checklist and the pickup route follow further down.</p>
+  </header>
+
+  <section class="picks" aria-labelledby="picks-h">
+    <div class="picks-head">
+      <h2 id="picks-h">My two picks</h2>
+      <p class="note">Same screen, same RTX 5060 graphics card — the choice is which PC. Fortnite, Minecraft and Roblox run well on either.</p>
+    </div>
+    <div class="pick-grid">
+
+      <article class="pick-card">
+        <span class="tag best">Recommended · Performance</span>
+        <h3>Acer Nitro 50 + Samsung 27″</h3>
+        <p class="why">The fastest PC for the money and a sharp, fast 27″ screen — all from one shop, collected in Palma on Wednesday.</p>
+        <div class="table-wrap">
+          <table class="buy">
+            <thead><tr><th scope="col">Buy</th><th scope="col">Where</th><th scope="col" class="r">Price</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://www.mediamarkt.es/es/product/_pc-gaming-acer-nitro-50-n50-656-intelr-coretm-i5-14400f-16gb-ram-512-gb-ssd-geforce-rtxtm-5060-sin-sistema-operativo-negro-1607335.html" target="_blank" rel="noopener">Acer Nitro 50</a><span class="sub">i5-14400F · RTX 5060 · 16GB DDR5 · 512GB · keyboard + mouse in the box</span></td><td>MediaMarkt</td><td class="r">949.00 €</td></tr>
+              <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-samsung-ls27fg506euxen-27-qhd-180-hz-1-ms-ips-conmutacion-en-el-plano-altura-ajustable-negro-1614059.html" target="_blank" rel="noopener">Samsung Odyssey G5 27″</a><span class="sub">1440p · 180Hz · IPS · height-adjustable</span></td><td>MediaMarkt</td><td class="r">159.00 €</td></tr>
+              <tr><td><a href="https://www.mediamarkt.es/es/product/_auriculares-gaming-corsair-hs35-v2-circumaurales-microfono-omnidireccional-carbon-1572559.html" target="_blank" rel="noopener">Corsair HS35 v2 headset</a></td><td>MediaMarkt</td><td class="r">35.99 €</td></tr>
+              <tr><td><a href="https://www.mediamarkt.es/es/product/_microsoft-windows-11-home-1596260.html" target="_blank" rel="noopener">Windows 11 Home</a><span class="sub">Digital code by email</span></td><td>MediaMarkt</td><td class="r">145.00 €</td></tr>
+            </tbody>
+            <tfoot><tr><td>Complete</td><td></td><td class="r">1,288.99 €</td></tr></tfoot>
+          </table>
+        </div>
+        <p class="how"><b>How:</b> order all four online at MediaMarkt with <em>Recogida en tienda</em> at Palma Fan Mallorca and collect on Wed 16 Sep (19 min from Badia Gran). Install Windows with the emailed code from an 8GB USB stick.</p>
+        <p class="fit"><b>Choose this if</b> speed in games matters most.</p>
+        <p class="fine">Cheaper: Windows OEM licence from PcComponentes (98.99 €) → 1,242.98 € · his own licence, if it transfers → 1,143.99 €.</p>
+      </article>
+
+      <article class="pick-card">
+        <span class="tag best">Recommended · Upgradeable</span>
+        <h3>PcCom Lite + Samsung 27″</h3>
+        <p class="why">Windows already installed, a better keyboard, mouse and headset, and standard parts that can be upgraded for years.</p>
+        <div class="table-wrap">
+          <table class="buy">
+            <thead><tr><th scope="col">Buy</th><th scope="col">Where</th><th scope="col" class="r">Price</th></tr></thead>
+            <tbody>
+              <tr><td><a href="https://www.pccomponentes.com/pccom-lite-amd-ryzen-5-5500-16gb-1tb-ssd-rtx-5060-v2-japan" target="_blank" rel="noopener">PcCom Lite with Windows 11</a><span class="sub">Ryzen 5 5500 · RTX 5060 · 16GB DDR4 · 1TB · choose <em>Windows 11 Home</em> + <em>Negro</em></span></td><td>PcComponentes</td><td class="r">999.00 €</td></tr>
+              <tr><td><a href="https://www.pccomponentes.com/corsair-gaming-bundle-corsair-k55-core-rgb-corsair-harpoon-rgb-pro-corsair-mm100-corsair-hs35-v2" target="_blank" rel="noopener">Corsair set</a><span class="sub">Keyboard · mouse · mouse pad · headset</span></td><td>PcComponentes</td><td class="r">95.99 €</td></tr>
+              <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-samsung-ls27fg506euxen-27-qhd-180-hz-1-ms-ips-conmutacion-en-el-plano-altura-ajustable-negro-1614059.html" target="_blank" rel="noopener">Samsung Odyssey G5 27″</a><span class="sub">1440p · 180Hz · IPS · height-adjustable</span></td><td>MediaMarkt</td><td class="r">159.00 €</td></tr>
+            </tbody>
+            <tfoot><tr><td>Complete</td><td></td><td class="r">1,253.99 €</td></tr></tfoot>
+          </table>
+        </div>
+        <p class="how"><b>How:</b> order the PC and Corsair set at PcComponentes (delivered to Badia Gran, est. Thu 17 – Fri 18 Sep) and pick up the Samsung at MediaMarkt Palma. Plug in and play.</p>
+        <p class="fit"><b>Choose this if</b> he wants nothing to install and plans to upgrade later — a processor swap removes its speed gap.</p>
+        <p class="fine">All delivered from one shop instead: PcCom Elysium 24″ 240Hz (89.99 €) in place of the Samsung → 1,184.98 €.</p>
+      </article>
+    </div>
+    <div class="diff-block">
+      <h3>What's different between the two</h3>
+      <div class="table-wrap">
+        <table class="diff">
+          <thead><tr><th scope="col"></th><th scope="col" class="col">Performance · Acer</th><th scope="col" class="col">Upgradeable · PcCom</th><th scope="col">What it means</th></tr></thead>
+          <tbody>
+            <tr><td>Complete price</td><td>1,289 €</td><td class="win">1,254 €</td><td>The PcCom is 35 € cheaper because Windows is already included.</td></tr>
+            <tr><td>Speed in games</td><td class="win">Faster</td><td>Slower in fast games</td><td>Most games look the same on both. In fast games like Fortnite the Acer shows noticeably more frames per second (user tests: 188 vs 137).</td></tr>
+            <tr><td>Processor</td><td class="win">10 cores / 16 threads</td><td>6 cores / 12 threads</td><td>More cores help when a game, Discord and a browser run at the same time.</td></tr>
+            <tr><td>Graphics card</td><td>RTX 5060 8GB</td><td>RTX 5060 8GB</td><td>Identical — the part that matters most for games.</td></tr>
+            <tr><td>Connection to the graphics card</td><td class="win">Faster (PCIe 4.0)</td><td>Older (PCIe 3.0)</td><td>Only matters in big new games at high settings. On the PcCom it can be fixed later with a processor swap.</td></tr>
+            <tr><td>Memory (RAM)</td><td class="win">16GB, newer DDR5</td><td>16GB, older DDR4</td><td>Same amount; DDR5 is the newer, faster type.</td></tr>
+            <tr><td>Memory slots</td><td>2 slots, both used · max 32GB</td><td class="win">4 slots, 2 free</td><td>To add memory later the PcCom just takes two more sticks; the Acer has to replace both.</td></tr>
+            <tr><td>Storage</td><td>512GB</td><td class="win">1TB</td><td>Twice the space for games on the PcCom.</td></tr>
+            <tr><td>Extra SSD slot</td><td>1 free</td><td>1 free</td><td>Both can take a second SSD later — about 10 minutes, no cables.</td></tr>
+            <tr><td>Room for a stronger graphics card later</td><td>Hardly — small 500W power supply, compact case</td><td class="win">Yes — 650W power supply, standard parts</td><td>Standard parts can be replaced with anything from a computer shop.</td></tr>
+            <tr><td>WiFi and Bluetooth</td><td class="win">Fast WiFi 6E + Bluetooth</td><td>Basic WiFi, no Bluetooth</td><td>Matters without a network cable, and for wireless controllers or headphones.</td></tr>
+            <tr><td>Windows</td><td>Install with the code, about 30–45 min</td><td class="win">Already installed</td><td>The PcCom is ready to play the moment it is plugged in.</td></tr>
+            <tr><td>Keyboard · mouse · headset</td><td>Basic Acer set + Corsair headset</td><td class="win">Corsair gaming set incl. headset</td><td>The Corsair keyboard and mouse are nicer to play with.</td></tr>
+            <tr><td>Getting it</td><td class="win">Everything collected in Palma, Wed 16 Sep</td><td>PC delivered (est. Thu 17 – Fri 18) + monitor collected in Palma</td><td>The Acer is one trip; the PcCom is a delivery plus a trip.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">In one line: the Acer is quicker in games today; the PcCom is ready out of the box, has twice the storage and can grow for years.</p>
+    </div>
+    <p class="note"><a href="#setups-h">See the full comparison and all options ↓</a></p>
+  </section>
+
+
+  <section aria-labelledby="setups-h">
+    <h2 id="setups-h">The three setups</h2>
+    <p class="note">Status in the kit tables: <span class="chip ok">Included</span> comes with the purchase · <span class="chip buy">Buy</span> part of the total · <span class="chip check">Check</span> confirm on the day. Monitor totals include the kit.</p>
+
+    <div class="setups">
+
+      <!-- ===================== Setup A ===================== -->
+      <article class="setup best" id="setup-a">
+        <div class="setup-top">
+          <div class="setup-id">
+            <span class="tag best">A · Recommended: performance</span>
+            <h3>Acer Nitro 50 at MediaMarkt</h3>
+            <p class="where">Pickup at Palma Fan Mallorca or Ocimax · ready Wed 16 Sep</p>
+          </div>
+          <div class="setup-price"><span class="num">985 €</span><span class="sub">kit without monitor · 1,144 € with Samsung 27″</span></div>
+        </div>
+
+        <div class="block">
+          <h4>1 · The kit</h4>
+          <div class="table-wrap">
+            <table class="kit">
+              <thead><tr><th scope="col">Item</th><th scope="col">What</th><th scope="col" class="r">Price</th><th scope="col">Status</th></tr></thead>
+              <tbody>
+                <tr><td>PC</td><td><a href="https://www.mediamarkt.es/es/product/_pc-gaming-acer-nitro-50-n50-656-intelr-coretm-i5-14400f-16gb-ram-512-gb-ssd-geforce-rtxtm-5060-sin-sistema-operativo-negro-1607335.html" target="_blank" rel="noopener">Acer Nitro 50 N50-656</a>: i5-14400F, RTX 5060 8GB, 16GB DDR5, 512GB NVMe SSD, WiFi 6E, 500W<span class="sub">Pickup at both Palma stores from Wed 16 Sep · was 1,099 €</span></td><td class="r">949.00 €</td><td><span class="chip buy">Buy</span></td></tr>
+                <tr><td>Sound</td><td><a href="https://www.mediamarkt.es/es/product/_auriculares-gaming-corsair-hs35-v2-circumaurales-microfono-omnidireccional-carbon-1572559.html" target="_blank" rel="noopener">Corsair HS35 v2</a> headset with microphone<span class="sub">Covers sound whichever monitor he picks (several have no speakers) · MediaMarkt, pickup offered, stock not checked</span></td><td class="r">35.99 €</td><td><span class="chip buy">Buy</span></td></tr>
+                <tr><td>Keyboard + mouse</td><td>Acer USB keyboard and mouse in the PC box (Acer datasheet)<span class="sub">Basic set, Spanish layout — see upgrade options below</span></td><td class="r">0.00 €</td><td><span class="chip check">Check box</span></td></tr>
+                <tr><td>Windows 11</td><td>Not included — his own licence, if it transfers to a new PC<span class="sub">Otherwise buy one (see upgrade options). Installing needs an 8GB+ USB stick and Microsoft's free Media Creation Tool.</span></td><td class="r">0.00 €</td><td><span class="chip check">Check licence</span></td></tr>
+                <tr><td>Monitor cable</td><td>Use DisplayPort — the graphics card has 3 × DisplayPort, 1 × HDMI<span class="sub">If the monitor box has no DisplayPort cable, buy one in the store</span></td><td class="r">—</td><td><span class="chip check">Check box</span></td></tr>
+                <tr><td>Power</td><td>Power cables come with the PC and monitor · needs two free sockets</td><td class="r">0.00 €</td><td><span class="chip ok">Included</span></td></tr>
+              </tbody>
+              <tfoot><tr><td>Kit total</td><td>Without monitor, with his own Windows licence</td><td class="r">984.99 €</td><td></td></tr></tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="block-head">
+            <h4>2 · Choose a monitor</h4>
+            <span class="sub">All at MediaMarkt Palma except the PcCom Elysium (PcComponentes, delivered)</span>
+          </div>
+          <div class="table-wrap">
+            <table class="mon">
+              <thead><tr><th scope="col">Monitor</th><th scope="col">Screen</th><th scope="col">Palma stock</th><th scope="col" class="r">Monitor</th><th scope="col" class="r">Setup total</th></tr></thead>
+              <tbody>
+                <tr class="rec"><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-samsung-ls27fg506euxen-27-qhd-180-hz-1-ms-ips-conmutacion-en-el-plano-altura-ajustable-negro-1614059.html" target="_blank" rel="noopener">Samsung Odyssey G5 27″ (LS27FG506)</a><span class="sub">Recommended · 4.9 from 18</span></td><td>27″ 1440p 180Hz IPS flat, height-adjustable</td><td><span class="chip ok">Both: in stock</span></td><td class="r">159.00 €</td><td class="r tot">1,143.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-lg-ultrageartm-32g600a-b-315-qhd-180-hz-1-ms-va-curvo-1000r-2x-hdmi-amd-freesynctm-1607406.html" target="_blank" rel="noopener">LG UltraGear 32G600A-B</a><span class="sub">Biggest screen · 4.4 from 396 reviews</span></td><td>31.5″ 1440p 180Hz VA curved, height-adjustable, no speakers</td><td><span class="chip ok">Fan: in stock</span> <span class="chip check">Ocimax: Wed 16</span></td><td class="r">179.00 €</td><td class="r tot">1,163.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-samsung-ls32fg506euxen-32-qhd-180-hz-1-ms-ips-conmutacion-en-el-plano-altura-ajustable-negro-1614060.html" target="_blank" rel="noopener">Samsung LS32FG506</a><span class="sub">4.9 from 19</span></td><td>32″ 1440p 180Hz IPS flat, height-adjustable</td><td><span class="chip check">Both: Wed 16</span></td><td class="r">229.00 €</td><td class="r tot">1,213.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-aoc-q27g4xf-27-qhd-180-hz-1-ms-gtg-ips-adaptive-sync-antibrillo-1592462.html" target="_blank" rel="noopener">AOC Q27G4XF</a><span class="sub">4.6 from 59</span></td><td>27″ 1440p 180Hz IPS</td><td><span class="chip ok">Both: in stock</span></td><td class="r">139.00 €</td><td class="r tot">1,123.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-asus-tuf-vg249qm5a-238-full-hd-240-hz-03-ms-gtg-ips-freesync-premium-g-sync-compatible-altavoces-integrados-1605796.html" target="_blank" rel="noopener">ASUS TUF VG249QM5A</a><span class="sub">4.6 from 39</span></td><td>23.8″ 1080p 240Hz IPS, speakers</td><td><span class="chip ok">Both: in stock</span></td><td class="r">129.00 €</td><td class="r tot">1,113.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-philips-24m2n3201a00-238-full-hd-180-hz-1-ms-ips-hdr10-sistema-white-led-blanco-1592465.html" target="_blank" rel="noopener">Philips Evnia 24M2N3201A</a><span class="sub">4.5 from 6</span></td><td>24″ 1080p 180Hz IPS, height-adjustable, speakers</td><td><span class="chip check">Both: Wed 16</span></td><td class="r">119.00 €</td><td class="r tot">1,103.99 €</td></tr>
+                <tr><td><a href="https://www.pccomponentes.com/monitor-pccom-elysium-24-va-fhd-240-hz-adaptive-sync" target="_blank" rel="noopener">PcCom Elysium 24″</a><span class="sub">4.6 from 1,823 · PcComponentes</span></td><td>24″ 1080p 240Hz VA</td><td>Delivered, not in Palma stores</td><td class="r">89.99 €</td><td class="r tot">1,074.98 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-msi-g255f-245-full-hd-1-ms-180-hz-freesync-negro-1573023.html" target="_blank" rel="noopener">MSI G255F</a><span class="sub">4.6 from 18</span></td><td>24.5″ 1080p 180Hz IPS</td><td><span class="chip check">Both: Wed 16</span></td><td class="r">84.00 €</td><td class="r tot">1,068.99 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">1440p screens (LG, Samsung, AOC): big new games need DLSS or medium textures on the 8GB card; the Acer's PCIe 4.0 handles that well. 240Hz screens (ASUS, Elysium) make most use of the Acer's faster processor in Fortnite-type games.</p>
+        </div>
+
+        <div class="block">
+          <h4>3 · Extension and upgrade options</h4>
+          <div class="table-wrap">
+            <table class="ext">
+              <thead><tr><th scope="col">Option</th><th scope="col" class="r">Cost</th><th scope="col">Details</th></tr></thead>
+              <tbody>
+                <tr><td>Windows 11 licence</td><td class="r">+98.99 €</td><td>Only if his own licence doesn't transfer. <a href="https://www.pccomponentes.com/microsoft-windows-11-home-64bits-oem" target="_blank" rel="noopener">OEM licence at PcComponentes</a> (delivered, tied to this PC) — or <a href="https://www.mediamarkt.es/es/product/_microsoft-windows-11-home-1596260.html" target="_blank" rel="noopener">MediaMarkt digital code</a> 145 € by email</td></tr>
+                <tr><td>Better keyboard + mouse</td><td class="r">+78.19 €</td><td><a href="https://www.mediamarkt.es/es/product/_teclado-gaming-logitech-920-008086-g213-prodigy-retroiluminado-1343148.html" target="_blank" rel="noopener">Logitech G213</a> 56.20 € + <a href="https://www.mediamarkt.es/es/product/_raton-gaming-logitech-g-g203-con-cable-8000dpi-botones-personalizables-rgb-lightsync-memoria-integrada-negro-1477868.html" target="_blank" rel="noopener">Logitech G203</a> 21.99 € at MediaMarkt, instead of Acer's basic set. Check the keyboard layout (Spanish or German)</td></tr>
+                <tr><td>More storage</td><td class="r">~100–150 €</td><td>Second 1TB NVMe SSD in the free M.2 slot (Acer datasheet: 2 slots, 1 used). Side panel off, screw in, no cables, about 10 min. Worth it when the 512GB fills up</td></tr>
+                <tr><td>More memory</td><td class="r">not checked</td><td>16GB DDR5 as 2 × 8GB, maximum 32GB — both sticks have to be replaced. Memory prices are still very high; wait</td></tr>
+                <tr><td>Processor</td><td class="r">—</td><td>i5-14400F is already the strong part; Acer's own motherboard limits the choice</td></tr>
+                <tr><td>Graphics card</td><td class="r">—</td><td>Limited: 500W power supply and a compact 18-litre case</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pc">
+          <div>
+            <p class="label">Pros</p>
+            <ul class="pros">
+              <li>Fastest PC of the three: newer i5-14400F, DDR5, PCIe 4.0</li>
+              <li>Cheapest route to any given monitor</li>
+              <li>Everything collected in one trip on Wed 16; returns and warranty at a store in Palma</li>
+              <li>Easy second SSD later</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label">Cons</p>
+            <ul class="cons">
+              <li>Windows to sort out: licence and installation</li>
+              <li>512GB SSD fills after a few big games</li>
+              <li>Basic keyboard and mouse in the box</li>
+              <li>Owner reports of loud fans; Acer's own board and power supply limit bigger upgrades</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===================== Setup B ===================== -->
+      <article class="setup best" id="setup-b">
+        <div class="setup-top">
+          <div class="setup-id">
+            <span class="tag best">B · Recommended: upgradeable</span>
+            <h3>PcCom Lite at PcComponentes</h3>
+            <p class="where">Delivered to Badia Gran · estimated Thu 17 – Fri 18 Sep (confirm at checkout)</p>
+          </div>
+          <div class="setup-price"><span class="num">1,095 €</span><span class="sub">kit without monitor · 1,254 € with Samsung 27″</span></div>
+        </div>
+
+        <div class="block">
+          <h4>1 · The kit</h4>
+          <div class="table-wrap">
+            <table class="kit">
+              <thead><tr><th scope="col">Item</th><th scope="col">What</th><th scope="col" class="r">Price</th><th scope="col">Status</th></tr></thead>
+              <tbody>
+                <tr><td>PC</td><td><a href="https://www.pccomponentes.com/pccom-lite-amd-ryzen-5-5500-16gb-1tb-ssd-rtx-5060-v2-japan" target="_blank" rel="noopener">PcCom Lite</a>: Ryzen 5 5500, RTX 5060 8GB, 16GB DDR4, 1TB NVMe SSD, WiFi, 650W<span class="sub">Assembled and tested. On the page choose <em>Windows 11 Home</em> and colour <em>Negro</em></span></td><td class="r">999.00 €</td><td><span class="chip buy">Buy</span></td></tr>
+                <tr><td>Windows 11</td><td>Windows 11 Home installed and set up</td><td class="r">in PC</td><td><span class="chip ok">Included</span></td></tr>
+                <tr><td>Keyboard, mouse, sound</td><td><a href="https://www.pccomponentes.com/corsair-gaming-bundle-corsair-k55-core-rgb-corsair-harpoon-rgb-pro-corsair-mm100-corsair-hs35-v2" target="_blank" rel="noopener">Corsair bundle</a>: K55 Core keyboard, Harpoon mouse, MM100 pad, HS35 v2 headset<span class="sub">Spanish keyboard layout</span></td><td class="r">95.99 €</td><td><span class="chip buy">Buy</span></td></tr>
+                <tr><td>Monitor cable</td><td>HDMI or DisplayPort — the graphics card has 1 × HDMI, 3 × DisplayPort<span class="sub">Check the monitor box on arrival</span></td><td class="r">—</td><td><span class="chip check">Check box</span></td></tr>
+                <tr><td>Power</td><td>Power cables come with the PC and monitor</td><td class="r">0.00 €</td><td><span class="chip ok">Included</span></td></tr>
+              </tbody>
+              <tfoot><tr><td>Kit total</td><td>Without monitor, Windows ready</td><td class="r">1,094.99 €</td><td></td></tr></tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="block-head">
+            <h4>2 · Choose a monitor</h4>
+            <span class="sub">Same choices as A · the Elysium arrives with the PC; MediaMarkt monitors mean a trip to Palma</span>
+          </div>
+          <div class="table-wrap">
+            <table class="mon">
+              <thead><tr><th scope="col">Monitor</th><th scope="col">Screen</th><th scope="col">How he gets it</th><th scope="col" class="r">Monitor</th><th scope="col" class="r">Setup total</th></tr></thead>
+              <tbody>
+                <tr class="rec"><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-samsung-ls27fg506euxen-27-qhd-180-hz-1-ms-ips-conmutacion-en-el-plano-altura-ajustable-negro-1614059.html" target="_blank" rel="noopener">Samsung Odyssey G5 27″ (LS27FG506)</a><span class="sub">Recommended · 4.9 from 18</span></td><td>27″ 1440p 180Hz IPS, height-adjustable</td><td>MediaMarkt Palma, in stock</td><td class="r">159.00 €</td><td class="r tot">1,253.99 €</td></tr>
+                <tr><td><a href="https://www.pccomponentes.com/monitor-pccom-elysium-24-va-fhd-240-hz-adaptive-sync" target="_blank" rel="noopener">PcCom Elysium 24″</a><span class="sub">Cheapest · 4.6 from 1,823</span></td><td>24″ 1080p 240Hz VA</td><td>Delivered with the PC</td><td class="r">89.99 €</td><td class="r tot">1,184.98 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-asus-tuf-vg249qm5a-238-full-hd-240-hz-03-ms-gtg-ips-freesync-premium-g-sync-compatible-altavoces-integrados-1605796.html" target="_blank" rel="noopener">ASUS TUF VG249QM5A</a><span class="sub">4.6 from 39</span></td><td>23.8″ 1080p 240Hz IPS, speakers</td><td>MediaMarkt Palma, in stock</td><td class="r">129.00 €</td><td class="r tot">1,223.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-philips-24m2n3201a00-238-full-hd-180-hz-1-ms-ips-hdr10-sistema-white-led-blanco-1592465.html" target="_blank" rel="noopener">Philips Evnia 24M2N3201A</a><span class="sub">4.5 from 6</span></td><td>24″ 1080p 180Hz IPS, height-adjustable</td><td>MediaMarkt Palma, from Wed 16</td><td class="r">119.00 €</td><td class="r tot">1,213.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-msi-g255f-245-full-hd-1-ms-180-hz-freesync-negro-1573023.html" target="_blank" rel="noopener">MSI G255F</a><span class="sub">4.6 from 18</span></td><td>24.5″ 1080p 180Hz IPS</td><td>MediaMarkt Palma, from Wed 16</td><td class="r">84.00 €</td><td class="r tot">1,178.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-lg-ultrageartm-32g600a-b-315-qhd-180-hz-1-ms-va-curvo-1000r-2x-hdmi-amd-freesynctm-1607406.html" target="_blank" rel="noopener">LG UltraGear 32G600A-B</a><span class="sub">4.4 from 396</span></td><td>31.5″ 1440p 180Hz VA curved</td><td>MediaMarkt Fan, in stock</td><td class="r">179.00 €</td><td class="r tot">1,273.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-samsung-ls32fg506euxen-32-qhd-180-hz-1-ms-ips-conmutacion-en-el-plano-altura-ajustable-negro-1614060.html" target="_blank" rel="noopener">Samsung LS32FG506</a><span class="sub">4.9 from 19</span></td><td>32″ 1440p 180Hz IPS</td><td>MediaMarkt Palma, from Wed 16</td><td class="r">229.00 €</td><td class="r tot">1,323.99 €</td></tr>
+                <tr><td><a href="https://www.mediamarkt.es/es/product/_monitor-gaming-aoc-q27g4xf-27-qhd-180-hz-1-ms-gtg-ips-adaptive-sync-antibrillo-1592462.html" target="_blank" rel="noopener">AOC Q27G4XF</a><span class="sub">4.6 from 59</span></td><td>27″ 1440p 180Hz IPS</td><td>MediaMarkt Palma, in stock</td><td class="r">139.00 €</td><td class="r tot">1,233.99 €</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="note">On a 1440p screen, big new games that run out of the 8GB card's memory stutter more on the PcCom's PCIe 3.0 connection than on the Acer. In those games set textures to medium — or swap the processor later (see upgrade options), which removes the limit. Fortnite, Minecraft and Roblox are not affected.</p>
+        </div>
+
+        <div class="block">
+          <h4>3 · Extension and upgrade options</h4>
+          <div class="table-wrap">
+            <table class="ext">
+              <thead><tr><th scope="col">Option</th><th scope="col" class="r">Cost</th><th scope="col">Details</th></tr></thead>
+              <tbody>
+                <tr><td>Without Windows</td><td class="r">−50.00 €</td><td>Choose the version without Windows (949 €) if his own licence transfers — then he installs it himself</td></tr>
+                <tr><td>More storage</td><td class="r">~100–150 €</td><td>Second M.2 slot free on the MSI B550M board (buyers report adding a second SSD)</td></tr>
+                <tr><td>More memory</td><td class="r">not checked</td><td>16GB DDR4 in 2 of 4 slots — add two sticks for 32GB. Memory prices are still very high; wait</td></tr>
+                <tr><td>Processor</td><td class="r">not checked</td><td>Swap the Ryzen 5 5500 for a Ryzen 5 5600 or Ryzen 7 5700X on the same board: faster, and unlocks PCIe 4.0 — removes B's main weakness</td></tr>
+                <tr><td>Graphics card</td><td class="r">—</td><td>Room for a stronger card later: standard 650W ATX power supply, Micro-ATX case</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pc">
+          <div>
+            <p class="label">Pros</p>
+            <ul class="pros">
+              <li>Nothing to install: plug in cables and play</li>
+              <li>1TB SSD; better keyboard, mouse and headset in the kit</li>
+              <li>All standard parts; longest upgrade path</li>
+              <li>798 reviews, 4.5 / 5; free shipping and returns; warranty picked up from home</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label">Cons</p>
+            <ul class="cons">
+              <li>Slower processor and PCIe 3.0 — noticeable in fast games and at 1440p</li>
+              <li>Slower in fast games until a processor upgrade; with Windows bought for A, both packages cost about the same</li>
+              <li>Delivery date to Mallorca only confirmed at checkout; may come in several parcels</li>
+              <li>Budget house-brand power supply</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- ===================== Setup C ===================== -->
+      <article class="setup" id="setup-c">
+        <div class="setup-top">
+          <div class="setup-id">
+            <span class="tag box">C · All in one box</span>
+            <h3>Vibox V-148 bundle at Amazon</h3>
+            <p class="where">Sold and shipped by Vibox Gaming · 18–21 Sep to Palma 07001</p>
+          </div>
+          <div class="setup-price"><span class="num">1,245 €</span><span class="sub">complete, monitor included</span></div>
+        </div>
+
+        <div class="block">
+          <h4>1 · The kit</h4>
+          <div class="table-wrap">
+            <table class="kit">
+              <thead><tr><th scope="col">Item</th><th scope="col">What</th><th scope="col" class="r">Price</th><th scope="col">Status</th></tr></thead>
+              <tbody>
+                <tr><td>PC</td><td><a href="https://www.amazon.es/dp/B0C9QXNWSS" target="_blank" rel="noopener">Vibox V-148</a>: Ryzen 5 5500, RTX 5060 8GB, 16GB DDR4, 1TB SATA SSD<span class="sub">Power supply and motherboard not disclosed</span></td><td class="r">1,244.95 €</td><td><span class="chip buy">Buy</span></td></tr>
+                <tr><td>Windows 11</td><td>Windows 11 Home installed</td><td class="r">in price</td><td><span class="chip ok">Included</span></td></tr>
+                <tr><td>Monitor</td><td>23″ 1080p, refresh rate not stated — fixed, cannot be swapped</td><td class="r">in price</td><td><span class="chip ok">Included</span></td></tr>
+                <tr><td>Keyboard, mouse, sound</td><td>Keyboard, mouse, headset, LED mouse pad, WiFi 6 / Bluetooth USB adapter</td><td class="r">in price</td><td><span class="chip ok">Included</span></td></tr>
+                <tr><td>Cables</td><td>Not listed</td><td class="r">—</td><td><span class="chip check">Check box</span></td></tr>
+              </tbody>
+              <tfoot><tr><td>Total</td><td>Everything in one delivery</td><td class="r">1,244.95 €</td><td></td></tr></tfoot>
+            </table>
+          </div>
+        </div>
+
+        <div class="block">
+          <h4>2 · Extension and upgrade options</h4>
+          <p class="note">Not documented: Vibox doesn't publish the motherboard or power supply, so memory slots, a second SSD slot and graphics card headroom are unknown. The only swap is buying a better monitor on top and leaving the bundled one unused.</p>
+        </div>
+
+        <div class="pc">
+          <div>
+            <p class="label">Pros</p>
+            <ul class="pros">
+              <li>One delivery, nothing to combine</li>
+              <li>Headset and mouse pad included</li>
+            </ul>
+          </div>
+          <div>
+            <p class="label">Cons</p>
+            <ul class="cons">
+              <li>Most expensive, with B's slower processor</li>
+              <li>Slower SATA SSD; smallest monitor, unknown refresh rate, no choice</li>
+              <li>No reviews on Amazon.es; Vibox's warranty terms are written for direct purchases</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="sum-h">
+    <h2 id="sum-h">Side by side</h2>
+    <div class="table-wrap">
+      <table class="summary">
+        <thead>
+          <tr><th scope="col"></th><th scope="col" class="best">A · Acer Nitro 50</th><th scope="col">B · PcCom Lite</th><th scope="col">C · Vibox bundle</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Recommended package, all-in</td><td class="r">1,289 € (Samsung 27″ + Windows)</td><td class="r">1,254 € (Samsung 27″)</td><td class="r">1,245 €</td></tr>
+          <tr><td>Kit without monitor</td><td class="r">985 €</td><td class="r">1,095 €</td><td>—</td></tr>
+          <tr><td>With a 24″ 240Hz monitor</td><td class="r">1,114 € (ASUS)</td><td class="r">1,185 € (Elysium)</td><td class="r">1,245 € (23″ fixed)</td></tr>
+          <tr><td>With the Samsung 27″ (recommended)</td><td class="r">1,144 €</td><td class="r">1,254 €</td><td>not possible</td></tr>
+          <tr><td>With the LG 32″</td><td class="r">1,164 €</td><td class="r">1,274 €</td><td>not possible</td></tr>
+          <tr><td>Windows</td><td>+99 € if his licence doesn't transfer; install himself</td><td>Installed</td><td>Installed</td></tr>
+          <tr><td>Processor · connection</td><td>i5-14400F · PCIe 4.0 — fastest</td><td>Ryzen 5 5500 · PCIe 3.0</td><td>Ryzen 5 5500 · PCIe 3.0</td></tr>
+          <tr><td>Memory · storage</td><td>16GB DDR5 · 512GB NVMe</td><td>16GB DDR4 · 1TB NVMe</td><td>16GB DDR4 · 1TB SATA</td></tr>
+          <tr><td>Keyboard · mouse · sound</td><td>Acer basic set + Corsair headset</td><td>Corsair set incl. headset</td><td>Included set incl. headset</td></tr>
+          <tr><td>How it arrives</td><td>Pickup Wed 16 Sep, Palma</td><td>Delivered, est. Thu 17 – Fri 18</td><td>Delivered 18–21 Sep</td></tr>
+          <tr><td>Upgrades later</td><td>Second SSD easy; otherwise closed</td><td>Longest path, all standard parts</td><td>Unknown</td></tr>
+          <tr><td>Warranty · returns</td><td>MediaMarkt store in Palma</td><td>PcComponentes, home pickup</td><td>Vibox / Amazon</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Performance in short: all three use the same RTX 5060, so most games look alike at the same settings. The Acer's faster processor shows in high-frame-rate games — user tests of Fortnite at 1080p reported 188 fps with the i5-14400F against 137 fps with the Ryzen 5 5500 (single runs, settings may differ). Fortnite, Minecraft and Roblox run well on all three. Video tests: <a href="https://www.youtube.com/watch?v=KhCINiH5zgo" target="_blank" rel="noopener">i5-14400F + RTX 5060</a> · <a href="https://www.youtube.com/watch?v=_CLj0o1ATdM" target="_blank" rel="noopener">Ryzen 5 5500 + RTX 5060</a>.</p>
+  </section>
+
+  <section aria-labelledby="check-h">
+    <h2 id="check-h">Nothing missing: checklist for setup A</h2>
+    <ul class="checklist">
+      <li><div><b>Reserve online</b> at MediaMarkt with <em>Recogida en tienda</em> → Palma de Mallorca Fan: Acer Nitro 50, the chosen monitor, Corsair HS35 v2.</div></li>
+      <li><div><b>Windows:</b> buy the Windows 11 Home code at MediaMarkt (145 €, arrives by email) — or skip it if his existing licence can move to the new PC (one bought separately can; one that came with an old PC cannot).</div></li>
+      <li><div><b>USB stick, 8GB or larger,</b> prepared with Microsoft's free Media Creation Tool on another computer (German language is fine).</div></li>
+      <li><div><b>In the store:</b> open the Acer box and check the keyboard and mouse; check the monitor box for a DisplayPort cable — buy one there if not.</div></li>
+      <li><div><b>At home:</b> two free power sockets and a desk about 65 cm wide for the 27″ (about 75 cm for a 32″).</div></li>
+      <li><div><b>First start:</b> monitor into the graphics card's DisplayPort (the lower, horizontal strip), set the full refresh rate in Windows display settings, create a Microsoft child account for screen time.</div></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="route-h">
+    <h2 id="route-h">Pickup route from Badia Gran</h2>
+    <p class="note">One trip on Wednesday 16 Sep. Drive times from Google Maps, without traffic.</p>
+    <ol class="route-steps">
+      <li><div><b>Reserve online</b> the PC, monitor and headset with <em>Recogida en tienda</em> at MediaMarkt Palma de Mallorca Fan.</div></li>
+      <li><div><b>Badia Gran (07609) → FAN Mallorca Shopping</b>, Carrer del Cardenal Rossell s/n, 07007 Palma · <span class="num">19.0 km · ~19 min</span><span class="sub">Free underground parking, no time limit. Shops Mon–Sat 10:00–22:00, closed Sunday. <a href="https://www.google.com/maps/dir/07609+Badia+Gran,+Mallorca/FAN+Mallorca+Shopping,+Carrer+del+Cardenal+Rossell,+Palma" target="_blank" rel="noopener">Route in Google Maps</a></span></div></li>
+      <li><div><b>At MediaMarkt Fan:</b> collect everything, check keyboard, mouse and DisplayPort cable, buy anything missing.<span class="sub">GAME is in the same centre if he wants to compare.</span></div></li>
+      <li><div><b>FAN Mallorca → Badia Gran</b> · <span class="num">19.0 km · ~19 min</span><span class="sub">The Acer box is about 10 kg (24 × 52 × 49 cm); with a monitor it fits in any car boot.</span></div></li>
+    </ol>
+    <p class="note"><b>Alternative:</b> MediaMarkt Ocimax (Palma Nord), C/ Bisbe Pere Puigdorfila 1 · <span class="num">27.1 km · ~25 min</span> · closes 21:30 · 4 h free parking · the Samsung 27″ is in stock there too. <a href="https://www.google.com/maps/dir/07609+Badia+Gran,+Mallorca/MediaMarkt+Ocimax,+Carrer+Bisbe+Pere+Puigdorfila+1,+07010+Palma" target="_blank" rel="noopener">Route in Google Maps</a></p>
+  </section>
+
+  <div class="two">
+    <section class="plain" aria-labelledby="shops-h">
+      <h2 id="shops-h">Other shops on Mallorca</h2>
+      <ul>
+        <li><b>El Corte Inglés</b>, Palma (Avenidas · Jaume III, 971 770 177): sells the Acer with 1TB and Windows 11 — price not visible online, worth a call.</li>
+        <li><b>GAME</b>, FAN Mallorca and Alcampo Marratxí: GamePc Pro-A (Ryzen 7 5700, RTX 5060, 1TB) 1,179.99 € without Windows — same PCIe 3.0 limit as B.</li>
+        <li><b>Beep</b>, Palma: cheapest RTX 5060 PC 1,398 € — over budget.</li>
+        <li><b>PCBox</b>, Palma (3 stores): no budget gaming PCs online — ask in store.</li>
+        <li><b>Build to order</b> (a few days, phone for prices): Defcon Informática 971 909 131 · W-Mega 971 29 66 55 · APP Informática · Mundomatica · Clic Informàtics (Campos).</li>
+      </ul>
+    </section>
+    <section class="plain" aria-labelledby="out-h">
+      <h2 id="out-h">Looked at and left out</h2>
+      <ul>
+        <li><b>PCSpecialist:</b> 990 € buys an RTX 3050 with 8GB RAM.</li>
+        <li><b>iBuyPower packs</b> on PcComponentes, 1,299 €: marketplace seller, unspecified monitor.</li>
+        <li><b>"Complete gaming" packs</b> with Ryzen 3200G/5600G/5700G: no graphics card.</li>
+        <li><b>Memory PC</b> on Amazon.es: built to order in Germany.</li>
+        <li><b>34″ and 30″ ultrawide monitors:</b> too many pixels for an 8GB card, or not stocked locally above 100Hz.</li>
+      </ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>Prices, stock and dates as shown on 14 September 2026; they change. Memory prices in Europe are still several times their 2025 level, which is why complete setups land above 1,000 €.</p>
+    <ul>
+      <li><a href="https://gzhls.at/blob/ldb/6/f/c/d/ccb25b16228110dd0d4dd903bddff5bb8116.pdf" target="_blank" rel="noopener">Acer N50-656 datasheet</a></li>
+      <li><a href="https://www.pccomponentes.com/pc-acer-nitro-50-n50-656-intel-core-i5-14400f-16gb-1tb-ssd-rtx-5060" target="_blank" rel="noopener">Acer Nitro 50 specs at PcComponentes</a></li>
+      <li><a href="https://www.ldlc.com/en/product/PB00713603.html" target="_blank" rel="noopener">LG 32G600A-B specs (LDLC)</a></li>
+      <li><a href="https://www.techspot.com/review/2992-nvidia-geforce-rtx-5060/" target="_blank" rel="noopener">TechSpot – RTX 5060 review</a></li>
+      <li><a href="https://www.techspot.com/review/3004-nvidia-rtx-5060-ti-pcie-benchmark/" target="_blank" rel="noopener">TechSpot – 8GB cards on PCIe 3.0/4.0/5.0</a></li>
+      <li><a href="https://howmanyfps.com/processors/comparisons/core-i5-14400f-vs-ryzen-5-5500" target="_blank" rel="noopener">HowManyFPS – i5-14400F vs Ryzen 5 5500</a></li>
+      <li><a href="https://community.acer.com/en/discussion/717589/acer-nitro-n50-656-psu-unbearably-loud" target="_blank" rel="noopener">Acer Community – fan noise reports</a></li>
+      <li><a href="https://www.enviosydevoluciones.es/pccomponentes" target="_blank" rel="noopener">PcComponentes Balearic delivery times</a></li>
+      <li><a href="https://vibox.co.uk/gaming-pc-warranty" target="_blank" rel="noopener">Vibox warranty terms</a></li>
+      <li><a href="https://www.parkopedia.es/parking/carpark/fan_mallorca_shopping/07007/palma/" target="_blank" rel="noopener">FAN Mallorca parking</a> · <a href="https://www.ocimax.com/parking/" target="_blank" rel="noopener">Ocimax parking</a></li>
+      <li><a href="https://www.pcspecialist.es/pc-gaming/" target="_blank" rel="noopener">PCSpecialist.es gaming range</a></li>
+      <li><a href="https://www.tomshardware.com/pc-components/dram/retail-ddr5-memory-prices-slowly-drop-in-europe" target="_blank" rel="noopener">Tom's Hardware – DDR5 prices in Europe</a></li>
+    </ul>
+  </footer>
+</main>
+
+</body>
+</html>
